@@ -8,3 +8,4 @@
 <hr />
 
 <h2>{title}</h2>
+<p>You can see page <a href="/about">"About"</a></p>
