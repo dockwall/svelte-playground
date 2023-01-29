@@ -1,14 +1,22 @@
 <script lang="ts">
-	import { each } from 'svelte/internal';
-
 	const greeter: string = 'Hello Playground';
 	const isPlayground: boolean = true;
 	let ftNumber: number = 42;
 
+	const numbersArr: number[] = [1, 2, 3, 4, 5];
+	const genericAnyArr: Array<any> = [6, 9, 'this is string', true];
+
+	function showMessage(message: string): string {
+		return message;
+	}
+
 	const output: any = {
 		greeter,
 		isPlayground,
-		ftNumber
+		ftNumber,
+		numbersArr,
+		genericAnyArr,
+		showMessage
 	};
 </script>
 
@@ -18,7 +26,9 @@
 		<span>{index + 1}| {stringArr[0]}: {typeof stringArr[1]} => {stringArr[1]}</span>
 		<br />
 	{/each}
+	<br />
 </code>
+<br />
 <hr />
 
 <p>Back to <a href="/">Root Page</a></p>
