@@ -1,4 +1,5 @@
 <script lang="ts">
+	// Basic types
 	const greeter: string = 'Hello Playground';
 	const isPlayground: boolean = true;
 	let ftNumber: number = 42;
@@ -10,7 +11,8 @@
 		return message;
 	}
 
-	const output: any = {
+	const basicOutput: any = {
+		title: 'This is basic types',
 		greeter,
 		isPlayground,
 		ftNumber,
@@ -18,15 +20,34 @@
 		genericAnyArr,
 		showMessage
 	};
+
+	// Custom types
+	type Username = string;
+	type ID = string | number;
+
+	const defaultUsername: Username = 'anon';
+	const stringID: ID = 'a12345';
+	const numericID: ID = 12345;
+
+	const customOutput: any = {
+		title: 'This is custom types',
+		defaultUsername,
+		stringID,
+		numericID
+	};
 </script>
 
 <h1>This is TypeScript Playground section</h1>
 <code class="output">
-	{#each Object.entries(output) as stringArr, index}
+	{#each Object.entries(basicOutput) as stringArr, index}
 		<span>{index + 1}| {stringArr[0]}: {typeof stringArr[1]} => {stringArr[1]}</span>
 		<br />
 	{/each}
-	<br />
+	<hr />
+	{#each Object.entries(customOutput) as stringArr, index}
+		<span>{index + 1}| {stringArr[0]}: {typeof stringArr[1]} => {stringArr[1]}</span>
+		<br />
+	{/each}
 </code>
 <br />
 <hr />
