@@ -1,10 +1,23 @@
 <script lang="ts">
-	const output: string = `Hello world!`;
+	import { each } from 'svelte/internal';
+
+	const greeter: string = 'Hello Playground';
+	const isPlayground: boolean = true;
+	let ftNumber: number = 42;
+
+	const output: any = {
+		greeter,
+		isPlayground,
+		ftNumber
+	};
 </script>
 
 <h1>This is TypeScript Playground section</h1>
 <code class="output">
-	{output}
+	{#each Object.entries(output) as stringArr, index}
+		<span>{index + 1}| {stringArr[0]}: {typeof stringArr[1]} => {stringArr[1]}</span>
+		<br />
+	{/each}
 </code>
 <hr />
 
