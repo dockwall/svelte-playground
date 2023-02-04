@@ -11,6 +11,9 @@
 		return message;
 	}
 
+	// Tuple
+	const nameIdArr: [string, number] = ['Earth', 3];
+
 	const basicOutput: any = {
 		title: 'This is basic types',
 		greeter,
@@ -18,7 +21,8 @@
 		ftNumber,
 		numbersArr,
 		genericAnyArr,
-		showMessage
+		showMessage,
+		nameIdArr
 	};
 
 	// Custom types
