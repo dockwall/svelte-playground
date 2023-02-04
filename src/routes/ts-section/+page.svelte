@@ -39,6 +39,33 @@
 		stringID,
 		numericID
 	};
+
+	// Interfaces
+	interface Cat {
+		readonly id: number | string;
+		color: string;
+		name?: string;
+
+		temperament: {
+			aggressiveness: boolean;
+			affectionateness: boolean;
+		};
+	}
+
+	const myCat: Cat = {
+		id: 1,
+		color: 'silver',
+
+		temperament: {
+			aggressiveness: false,
+			affectionateness: true
+		}
+	};
+
+	const interfaceOutput: any = {
+		title: 'This is interfaces',
+		myCat
+	};
 </script>
 
 <h1>This is TypeScript Playground section</h1>
@@ -49,6 +76,11 @@
 	{/each}
 	<hr />
 	{#each Object.entries(customOutput) as stringArr, index}
+		<span>{index + 1}| {stringArr[0]}: {typeof stringArr[1]} => {stringArr[1]}</span>
+		<br />
+	{/each}
+	<hr />
+	{#each Object.entries(interfaceOutput) as stringArr, index}
 		<span>{index + 1}| {stringArr[0]}: {typeof stringArr[1]} => {stringArr[1]}</span>
 		<br />
 	{/each}
