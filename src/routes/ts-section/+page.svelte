@@ -62,6 +62,8 @@
 		}
 	};
 
+	myCat.name = 'Муська';
+
 	const interfaceOutput: any = {
 		title: 'This is interfaces',
 		myCat
