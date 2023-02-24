@@ -6,3 +6,4 @@
 <hr />
 <p>You can see page <a href="/about">"About"</a></p>
 <p>TypeScript Playground <a href="/ts-section">here</a></p>
+<p>Svelte Playground <a href="/svelte-section">here</a></p>
