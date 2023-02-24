@@ -1,7 +1,23 @@
 <script lang="ts">
+	const name: string = 'xD';
 </script>
 
-<h1>This is Svelte Playground Section</h1>
-<hr />
+<div class="svelte-playground">
+	<h1>This is Svelte Playground Section</h1>
 
-<p>Back to <a href="/">Root Page</a></p>
+	<p>Name value => {name}</p>
+
+	<img src="/joker.jpg" alt="{name} jokir" class="svelte-playground__img" />
+
+	<hr />
+
+	<p>Back to <a href="/">Root Page</a></p>
+</div>
+
+<style lang="scss">
+	.svelte-playground {
+		&__img {
+			height: 200px;
+		}
+	}
+</style>
