@@ -1,4 +1,6 @@
 <script lang="ts">
+	import ColorfulPixel from '../../lib/components/ColorfulPixel.svelte';
+
 	const name: string = 'xD';
 </script>
 
@@ -8,6 +10,8 @@
 	<p>Name value => {name}</p>
 
 	<img src="/joker.jpg" alt="{name} jokir" class="svelte-playground__img" />
+
+	<ColorfulPixel />
 
 	<hr />
 
