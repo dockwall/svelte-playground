@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ColorfulPixel from '../../lib/components/ColorfulPixel.svelte';
+	import ColorfulPixel from '$lib/components/ColorfulPixel.svelte';
 
 	const name: string = 'xD';
 </script>
